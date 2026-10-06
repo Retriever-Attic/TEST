@@ -1,0 +1,4 @@
+torch>=2.2
+snntorch>=0.9
+numpy
+scipy
