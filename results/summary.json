@@ -1,0 +1,1194 @@
+{
+  "modes": {
+    "raw": {
+      "scenes": {
+        "clean": {
+          "recall": 0.532275100878234,
+          "precision": 0.5279591124577634,
+          "roi_area": 0.12497464134579613,
+          "recall_std": 0.31353007880028555
+        },
+        "flicker": {
+          "recall": 0.5209091266641758,
+          "precision": 0.4176375684240853,
+          "roi_area": 0.12288248697916665,
+          "recall_std": 0.3969572337048379
+        },
+        "noise": {
+          "recall": 0.698943810730883,
+          "precision": 0.4099968364441632,
+          "roi_area": 0.13002658420138888,
+          "recall_std": 0.32222261719565626
+        },
+        "slow_large": {
+          "recall": 0.9629060879060879,
+          "precision": 0.6597218999339558,
+          "roi_area": 0.38571268717447915,
+          "recall_std": 0.07327480060756175
+        },
+        "small_fast": {
+          "recall": 0.1387252412392077,
+          "precision": 0.16817874653132234,
+          "roi_area": 0.03505148912863757,
+          "recall_std": 0.19649682659982415
+        },
+        "texture": {
+          "recall": 0.7278447446718622,
+          "precision": 0.17432047747292467,
+          "roi_area": 0.39723303813879984,
+          "recall_std": 0.2779870038659483
+        },
+        "ALL": {
+          "recall": 0.6189101673269208,
+          "precision": 0.31995624278956714,
+          "roi_area": 0.21372199164496525,
+          "recall_std": 0.3781486534202086
+        }
+      },
+      "lif1": 0.18885101936757565,
+      "lif2": 0.04301222134381533,
+      "act": 0.989434540271759,
+      "recall_seed_sd": 0.018440132074276805,
+      "failures": [
+        {
+          "seq": 164,
+          "scene": "small_fast",
+          "recall": 0.0,
+          "precision": 0.0,
+          "roi_area": 0.008284505208333333
+        },
+        {
+          "seq": 193,
+          "scene": "small_fast",
+          "recall": 0.0,
+          "precision": 0.0,
+          "roi_area": 0.0159423828125
+        },
+        {
+          "seq": 103,
+          "scene": "flicker",
+          "recall": 0.0,
+          "precision": 0.0,
+          "roi_area": 0.07176106770833333
+        },
+        {
+          "seq": 74,
+          "scene": "noise",
+          "recall": 0.0,
+          "precision": 0.0,
+          "roi_area": 0.15411783854166666
+        },
+        {
+          "seq": 197,
+          "scene": "small_fast",
+          "recall": 0.0,
+          "precision": 0.03125,
+          "roi_area": 0.012809244791666667
+        },
+        {
+          "seq": 161,
+          "scene": "small_fast",
+          "recall": 0.0,
+          "precision": 0.04081632653061224,
+          "roi_area": 0.0169677734375
+        },
+        {
+          "seq": 191,
+          "scene": "small_fast",
+          "recall": 0.0,
+          "precision": 0.0,
+          "roi_area": 0.029239908854166666
+        },
+        {
+          "seq": 105,
+          "scene": "flicker",
+          "recall": 0.0,
+          "precision": 0.0,
+          "roi_area": 0.051123046875
+        }
+      ]
+    },
+    "diff": {
+      "scenes": {
+        "clean": {
+          "recall": 1.0,
+          "precision": 0.994424882629108,
+          "roi_area": 0.16701972598121279,
+          "recall_std": 0.0
+        },
+        "flicker": {
+          "recall": 0.9988151658767772,
+          "precision": 0.6213878077552231,
+          "roi_area": 0.24250758315577647,
+          "recall_std": 0.004999999999999999
+        },
+        "noise": {
+          "recall": 0.9958333333333333,
+          "precision": 0.5511437942778815,
+          "roi_area": 0.16441650390624998,
+          "recall_std": 0.0055555555555555575
+        },
+        "slow_large": {
+          "recall": 0.8610257985257985,
+          "precision": 0.992923379576282,
+          "roi_area": 0.2423212687174479,
+          "recall_std": 0.16241766294117121
+        },
+        "small_fast": {
+          "recall": 0.9403673607584222,
+          "precision": 0.9390698896479244,
+          "roi_area": 0.05580163380456349,
+          "recall_std": 0.1088570815978908
+        },
+        "texture": {
+          "recall": 1.0,
+          "precision": 0.9852844262049546,
+          "roi_area": 0.1476432082999466,
+          "recall_std": 0.0
+        },
+        "ALL": {
+          "recall": 0.9624519322107841,
+          "precision": 0.8316379539358076,
+          "roi_area": 0.17328294542100697,
+          "recall_std": 0.10213662081905005
+        }
+      },
+      "lif1": 0.06821204954758286,
+      "lif2": 0.06688972329720855,
+      "act": 0.9642614349722862,
+      "recall_seed_sd": 0.015221393288628371,
+      "failures": [
+        {
+          "seq": 190,
+          "scene": "small_fast",
+          "recall": 0.5,
+          "precision": 0.9375,
+          "roi_area": 0.010538736979166666
+        },
+        {
+          "seq": 218,
+          "scene": "slow_large",
+          "recall": 0.5333333333333333,
+          "precision": 0.9863013698630136,
+          "roi_area": 0.19838053385416668
+        },
+        {
+          "seq": 236,
+          "scene": "slow_large",
+          "recall": 0.5333333333333333,
+          "precision": 0.9821428571428571,
+          "roi_area": 0.07549641927083334
+        },
+        {
+          "seq": 208,
+          "scene": "slow_large",
+          "recall": 0.6,
+          "precision": 1.0,
+          "roi_area": 0.2598795572916667
+        },
+        {
+          "seq": 230,
+          "scene": "slow_large",
+          "recall": 0.6333333333333333,
+          "precision": 0.9795918367346939,
+          "roi_area": 0.0929931640625
+        },
+        {
+          "seq": 202,
+          "scene": "slow_large",
+          "recall": 0.6333333333333333,
+          "precision": 1.0,
+          "roi_area": 0.11515299479166667
+        },
+        {
+          "seq": 222,
+          "scene": "slow_large",
+          "recall": 0.7,
+          "precision": 0.98,
+          "roi_area": 0.24778645833333332
+        },
+        {
+          "seq": 216,
+          "scene": "slow_large",
+          "recall": 0.75,
+          "precision": 0.9857142857142858,
+          "roi_area": 0.28724772135416665
+        }
+      ]
+    },
+    "raw+diff": {
+      "scenes": {
+        "clean": {
+          "recall": 1.0,
+          "precision": 0.663129677754165,
+          "roi_area": 0.159549313499814,
+          "recall_std": 0.0
+        },
+        "flicker": {
+          "recall": 1.0,
+          "precision": 0.534082917600758,
+          "roi_area": 0.24715036103219695,
+          "recall_std": 0.0
+        },
+        "noise": {
+          "recall": 1.0,
+          "precision": 0.5731196097836844,
+          "roi_area": 0.14544542100694444,
+          "recall_std": 0.0
+        },
+        "slow_large": {
+          "recall": 0.9332642301392302,
+          "precision": 0.7481087849987156,
+          "roi_area": 0.3381103515625,
+          "recall_std": 0.09838530276176313
+        },
+        "small_fast": {
+          "recall": 0.7675215845606906,
+          "precision": 0.6893291581356137,
+          "roi_area": 0.04439891028025794,
+          "recall_std": 0.18480710101133246
+        },
+        "texture": {
+          "recall": 0.9988179669030732,
+          "precision": 0.29811358122493437,
+          "roi_area": 0.2712556061921297,
+          "recall_std": 0.0028059792904228152
+        },
+        "ALL": {
+          "recall": 0.9531550881785196,
+          "precision": 0.5210194334314939,
+          "roi_area": 0.20954820421006942,
+          "recall_std": 0.14466083152871237
+        }
+      },
+      "lif1": 0.1449570069089532,
+      "lif2": 0.0708761210553348,
+      "act": 0.9768479838967323,
+      "recall_seed_sd": 0.006425750144833708,
+      "failures": [
+        {
+          "seq": 171,
+          "scene": "small_fast",
+          "recall": 0.16666666666666666,
+          "precision": 0.22950819672131148,
+          "roi_area": 0.0391357421875
+        },
+        {
+          "seq": 182,
+          "scene": "small_fast",
+          "recall": 0.26666666666666666,
+          "precision": 0.32142857142857145,
+          "roi_area": 0.021818033854166665
+        },
+        {
+          "seq": 202,
+          "scene": "slow_large",
+          "recall": 0.36666666666666664,
+          "precision": 0.8867924528301887,
+          "roi_area": 0.096923828125
+        },
+        {
+          "seq": 190,
+          "scene": "small_fast",
+          "recall": 0.43333333333333335,
+          "precision": 0.5185185185185185,
+          "roi_area": 0.011075846354166667
+        },
+        {
+          "seq": 167,
+          "scene": "small_fast",
+          "recall": 0.5666666666666667,
+          "precision": 0.9090909090909091,
+          "roi_area": 0.017732747395833335
+        },
+        {
+          "seq": 208,
+          "scene": "slow_large",
+          "recall": 0.5833333333333334,
+          "precision": 0.5588235294117647,
+          "roi_area": 0.3911865234375
+        },
+        {
+          "seq": 188,
+          "scene": "small_fast",
+          "recall": 0.6166666666666667,
+          "precision": 0.3902439024390244,
+          "roi_area": 0.08116048177083333
+        },
+        {
+          "seq": 200,
+          "scene": "slow_large",
+          "recall": 0.6333333333333333,
+          "precision": 0.9464285714285714,
+          "roi_area": 0.2844156901041667
+        }
+      ]
+    },
+    "absdiff": {
+      "scenes": {
+        "clean": {
+          "recall": 0.8917398528364586,
+          "precision": 0.8878390454163163,
+          "roi_area": 0.12393544514973959,
+          "recall_std": 0.12435928504130203
+        },
+        "flicker": {
+          "recall": 0.7446952862283928,
+          "precision": 0.6379937841603258,
+          "roi_area": 0.10165671608664772,
+          "recall_std": 0.19657040840325032
+        },
+        "noise": {
+          "recall": 0.6384241656104774,
+          "precision": 0.13283216375960433,
+          "roi_area": 0.20475802951388888,
+          "recall_std": 0.1499483532394974
+        },
+        "slow_large": {
+          "recall": 0.5923892642642643,
+          "precision": 0.9461314576764492,
+          "roi_area": 0.16581776936848958,
+          "recall_std": 0.23013844263522215
+        },
+        "small_fast": {
+          "recall": 0.9388776028440833,
+          "precision": 0.8498652104790212,
+          "roi_area": 0.1071046859499008,
+          "recall_std": 0.0882283839628861
+        },
+        "texture": {
+          "recall": 0.9380219148037285,
+          "precision": 0.9113641005794391,
+          "roi_area": 0.12251647775329416,
+          "recall_std": 0.07390447643081124
+        },
+        "ALL": {
+          "recall": 0.7904666577538225,
+          "precision": 0.4887248956571131,
+          "roi_area": 0.13230719672309027,
+          "recall_std": 0.20987939789008309
+        }
+      },
+      "lif1": 0.2627656739205122,
+      "lif2": 0.024182518245652318,
+      "act": 0.9642614349722862,
+      "recall_seed_sd": 0.1108259391909483,
+      "failures": [
+        {
+          "seq": 230,
+          "scene": "slow_large",
+          "recall": 0.1,
+          "precision": 0.5333333333333333,
+          "roi_area": 0.029622395833333332
+        },
+        {
+          "seq": 71,
+          "scene": "noise",
+          "recall": 0.11666666666666667,
+          "precision": 0.04815864022662889,
+          "roi_area": 0.09300944010416666
+        },
+        {
+          "seq": 202,
+          "scene": "slow_large",
+          "recall": 0.2,
+          "precision": 0.9574468085106383,
+          "roi_area": 0.08028157552083333
+        },
+        {
+          "seq": 205,
+          "scene": "slow_large",
+          "recall": 0.2,
+          "precision": 1.0,
+          "roi_area": 0.08145345052083333
+        },
+        {
+          "seq": 106,
+          "scene": "flicker",
+          "recall": 0.26666666666666666,
+          "precision": 0.552,
+          "roi_area": 0.06818033854166666
+        },
+        {
+          "seq": 236,
+          "scene": "slow_large",
+          "recall": 0.26666666666666666,
+          "precision": 0.9615384615384616,
+          "roi_area": 0.05321451822916667
+        },
+        {
+          "seq": 91,
+          "scene": "flicker",
+          "recall": 0.2833333333333333,
+          "precision": 0.7472527472527473,
+          "roi_area": 0.07975260416666667
+        },
+        {
+          "seq": 218,
+          "scene": "slow_large",
+          "recall": 0.36666666666666664,
+          "precision": 0.9191919191919192,
+          "roi_area": 0.10032552083333333
+        }
+      ]
+    },
+    "thresh": {
+      "scenes": {
+        "clean": {
+          "recall": 0.979788749109898,
+          "precision": 0.948962699337814,
+          "roi_area": 0.149163818359375,
+          "recall_std": 0.06172424267144182
+        },
+        "flicker": {
+          "recall": 0.7621875675994573,
+          "precision": 0.5655999241071016,
+          "roi_area": 0.11706868489583333,
+          "recall_std": 0.20789094590824403
+        },
+        "noise": {
+          "recall": 0.48883607942543306,
+          "precision": 0.10665427090376381,
+          "roi_area": 0.21594215675636572,
+          "recall_std": 0.14289884547400275
+        },
+        "slow_large": {
+          "recall": 0.8411820911820911,
+          "precision": 0.9900404571387563,
+          "roi_area": 0.23193842569986978,
+          "recall_std": 0.147066635357613
+        },
+        "small_fast": {
+          "recall": 0.9789317758591501,
+          "precision": 0.8967013387962375,
+          "roi_area": 0.11282842726934525,
+          "recall_std": 0.047470409780913006
+        },
+        "texture": {
+          "recall": 0.9952718676122931,
+          "precision": 0.9566564897839754,
+          "roi_area": 0.13939441996082624,
+          "recall_std": 0.005753588140458086
+        },
+        "ALL": {
+          "recall": 0.8533639243252625,
+          "precision": 0.4668149607492452,
+          "roi_area": 0.15671434190538194,
+          "recall_std": 0.20691629401753653
+        }
+      },
+      "lif1": 0.08467277092859149,
+      "lif2": 0.041577200405299664,
+      "act": 0.12855229806154966,
+      "recall_seed_sd": 0.07417230755879545,
+      "failures": [
+        {
+          "seq": 71,
+          "scene": "noise",
+          "recall": 0.18333333333333332,
+          "precision": 0.0529595015576324,
+          "roi_area": 0.0947021484375
+        },
+        {
+          "seq": 74,
+          "scene": "noise",
+          "recall": 0.2,
+          "precision": 0.028846153846153848,
+          "roi_area": 0.09593098958333333
+        },
+        {
+          "seq": 106,
+          "scene": "flicker",
+          "recall": 0.2,
+          "precision": 0.4090909090909091,
+          "roi_area": 0.0379638671875
+        },
+        {
+          "seq": 119,
+          "scene": "flicker",
+          "recall": 0.2,
+          "precision": 0.4186046511627907,
+          "roi_area": 0.047159830729166664
+        },
+        {
+          "seq": 68,
+          "scene": "noise",
+          "recall": 0.23333333333333334,
+          "precision": 0.12012012012012012,
+          "roi_area": 0.11178385416666667
+        },
+        {
+          "seq": 75,
+          "scene": "noise",
+          "recall": 0.3,
+          "precision": 0.04678362573099415,
+          "roi_area": 0.11226399739583333
+        },
+        {
+          "seq": 52,
+          "scene": "noise",
+          "recall": 0.3,
+          "precision": 0.09444444444444444,
+          "roi_area": 0.13186848958333333
+        },
+        {
+          "seq": 41,
+          "scene": "noise",
+          "recall": 0.36666666666666664,
+          "precision": 0.14029850746268657,
+          "roi_area": 0.12962239583333332
+        }
+      ]
+    },
+    "polarity": {
+      "scenes": {
+        "clean": {
+          "recall": 0.9197365297887492,
+          "precision": 0.8888531089775812,
+          "roi_area": 0.10040087018694198,
+          "recall_std": 0.11660887393481119
+        },
+        "flicker": {
+          "recall": 0.4340524276808716,
+          "precision": 0.3076002014057466,
+          "roi_area": 0.21063761393229163,
+          "recall_std": 0.2572885600675953
+        },
+        "noise": {
+          "recall": 0.09709547950992818,
+          "precision": 0.6576302162656107,
+          "roi_area": 0.007998318142361112,
+          "recall_std": 0.08288390342538615
+        },
+        "slow_large": {
+          "recall": 0.6022002115752115,
+          "precision": 0.983701086073513,
+          "roi_area": 0.17576039632161455,
+          "recall_std": 0.19338235750260882
+        },
+        "small_fast": {
+          "recall": 0.7532165227695955,
+          "precision": 0.927564519626979,
+          "roi_area": 0.030164930555555556,
+          "recall_std": 0.21549849429455667
+        },
+        "texture": {
+          "recall": 0.7342492966228911,
+          "precision": 0.80498899486427,
+          "roi_area": 0.08361552094462252,
+          "recall_std": 0.19435877382910574
+        },
+        "ALL": {
+          "recall": 0.611870119924663,
+          "precision": 0.7395371650092701,
+          "roi_area": 0.1066570366753472,
+          "recall_std": 0.331588491910931
+        }
+      },
+      "lif1": 0.0733658499084413,
+      "lif2": 0.04507076716981828,
+      "act": 0.06427614903077483,
+      "recall_seed_sd": 0.1934569462719684,
+      "failures": [
+        {
+          "seq": 75,
+          "scene": "noise",
+          "recall": 0.0,
+          "precision": 0.1111111111111111,
+          "roi_area": 0.0023681640625
+        },
+        {
+          "seq": 52,
+          "scene": "noise",
+          "recall": 0.0,
+          "precision": 0.25,
+          "roi_area": 0.0036702473958333333
+        },
+        {
+          "seq": 68,
+          "scene": "noise",
+          "recall": 0.0,
+          "precision": 0.5,
+          "roi_area": 0.005029296875
+        },
+        {
+          "seq": 236,
+          "scene": "slow_large",
+          "recall": 0.027777777777777776,
+          "precision": 1.0,
+          "roi_area": 0.11713053385416666
+        },
+        {
+          "seq": 119,
+          "scene": "flicker",
+          "recall": 0.03333333333333333,
+          "precision": 0.11363636363636363,
+          "roi_area": 0.04140625
+        },
+        {
+          "seq": 193,
+          "scene": "small_fast",
+          "recall": 0.03333333333333333,
+          "precision": 0.2857142857142857,
+          "roi_area": 0.0088623046875
+        },
+        {
+          "seq": 126,
+          "scene": "texture",
+          "recall": 0.03333333333333333,
+          "precision": 0.2962962962962963,
+          "roi_area": 0.027140299479166668
+        },
+        {
+          "seq": 72,
+          "scene": "noise",
+          "recall": 0.03333333333333333,
+          "precision": 0.5,
+          "roi_area": 0.0040852864583333336
+        }
+      ]
+    }
+  },
+  "beta_sweep": {
+    "0.5": {
+      "scenes": {
+        "clean": {
+          "recall": 0.9951163066698314,
+          "precision": 1.0,
+          "roi_area": 0.14255218505859374,
+          "recall_std": 0.010420440976167495
+        },
+        "flicker": {
+          "recall": 1.0,
+          "precision": 0.8267560638927234,
+          "roi_area": 0.14701641660748105,
+          "recall_std": 0.0
+        },
+        "noise": {
+          "recall": 0.9873521335023236,
+          "precision": 0.877911804741073,
+          "roi_area": 0.12679488570601852,
+          "recall_std": 0.019305869959472526
+        },
+        "slow_large": {
+          "recall": 0.4047740922740923,
+          "precision": 1.0,
+          "roi_area": 0.13341598510742186,
+          "recall_std": 0.20739764796596966
+        },
+        "small_fast": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "roi_area": 0.07858279596560848,
+          "recall_std": 0.0
+        },
+        "texture": {
+          "recall": 0.9881549497074131,
+          "precision": 1.0,
+          "roi_area": 0.12487166967147437,
+          "recall_std": 0.017927937388984162
+        },
+        "ALL": {
+          "recall": 0.8780597588606571,
+          "precision": 0.952159370367057,
+          "roi_area": 0.12537285698784723,
+          "recall_std": 0.252502981287429
+        }
+      },
+      "lif1": 0.0338588182348758,
+      "lif2": 0.050042648799717426,
+      "act": 0.9642614349722862,
+      "recall_seed_sd": 0.0408591600582619,
+      "failures": [
+        {
+          "seq": 230,
+          "scene": "slow_large",
+          "recall": 0.06666666666666667,
+          "precision": 1.0,
+          "roi_area": 0.034586588541666664
+        },
+        {
+          "seq": 236,
+          "scene": "slow_large",
+          "recall": 0.1,
+          "precision": 1.0,
+          "roi_area": 0.0317626953125
+        },
+        {
+          "seq": 205,
+          "scene": "slow_large",
+          "recall": 0.16666666666666666,
+          "precision": 1.0,
+          "roi_area": 0.0647216796875
+        },
+        {
+          "seq": 200,
+          "scene": "slow_large",
+          "recall": 0.2,
+          "precision": 1.0,
+          "roi_area": 0.05560709635416667
+        },
+        {
+          "seq": 222,
+          "scene": "slow_large",
+          "recall": 0.2,
+          "precision": 1.0,
+          "roi_area": 0.140771484375
+        },
+        {
+          "seq": 218,
+          "scene": "slow_large",
+          "recall": 0.21666666666666667,
+          "precision": 1.0,
+          "roi_area": 0.1067138671875
+        },
+        {
+          "seq": 213,
+          "scene": "slow_large",
+          "recall": 0.2222222222222222,
+          "precision": 1.0,
+          "roi_area": 0.13745930989583333
+        },
+        {
+          "seq": 225,
+          "scene": "slow_large",
+          "recall": 0.23333333333333334,
+          "precision": 1.0,
+          "roi_area": 0.08920084635416667
+        }
+      ]
+    },
+    "0.75": {
+      "scenes": {
+        "clean": {
+          "recall": 0.9973890339425587,
+          "precision": 1.0,
+          "roi_area": 0.15329996744791669,
+          "recall_std": 0.005511981898051229
+        },
+        "flicker": {
+          "recall": 0.9989626556016598,
+          "precision": 0.8311872909698996,
+          "roi_area": 0.15850267814867425,
+          "recall_std": 0.003884861990378837
+        },
+        "noise": {
+          "recall": 0.9911544148711449,
+          "precision": 0.8412347317456806,
+          "roi_area": 0.13753571686921295,
+          "recall_std": 0.013581305986328198
+        },
+        "slow_large": {
+          "recall": 0.7246280371280371,
+          "precision": 0.9927760267545653,
+          "roi_area": 0.20009892781575522,
+          "recall_std": 0.2613857284498698
+        },
+        "small_fast": {
+          "recall": 0.9970882004401558,
+          "precision": 0.9895818003964716,
+          "roi_area": 0.07012319413442461,
+          "recall_std": 0.008254440992512373
+        },
+        "texture": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "roi_area": 0.13632993344907407,
+          "recall_std": 0.0
+        },
+        "ALL": {
+          "recall": 0.9413106806363771,
+          "precision": 0.9476688373394526,
+          "roi_area": 0.14463623046875002,
+          "recall_std": 0.16126518499278647
+        }
+      },
+      "lif1": 0.05027245730161667,
+      "lif2": 0.057450572960078716,
+      "act": 0.9642614349722862,
+      "recall_seed_sd": 0.028137027941766257,
+      "failures": [
+        {
+          "seq": 236,
+          "scene": "slow_large",
+          "recall": 0.16666666666666666,
+          "precision": 1.0,
+          "roi_area": 0.04388020833333333
+        },
+        {
+          "seq": 230,
+          "scene": "slow_large",
+          "recall": 0.23333333333333334,
+          "precision": 1.0,
+          "roi_area": 0.0525634765625
+        },
+        {
+          "seq": 202,
+          "scene": "slow_large",
+          "recall": 0.26666666666666666,
+          "precision": 1.0,
+          "roi_area": 0.081396484375
+        },
+        {
+          "seq": 205,
+          "scene": "slow_large",
+          "recall": 0.36666666666666664,
+          "precision": 1.0,
+          "roi_area": 0.08729654947916667
+        },
+        {
+          "seq": 218,
+          "scene": "slow_large",
+          "recall": 0.43333333333333335,
+          "precision": 1.0,
+          "roi_area": 0.14733072916666667
+        },
+        {
+          "seq": 208,
+          "scene": "slow_large",
+          "recall": 0.5,
+          "precision": 1.0,
+          "roi_area": 0.18766276041666666
+        },
+        {
+          "seq": 200,
+          "scene": "slow_large",
+          "recall": 0.5333333333333333,
+          "precision": 1.0,
+          "roi_area": 0.08369140625
+        },
+        {
+          "seq": 222,
+          "scene": "slow_large",
+          "recall": 0.5666666666666667,
+          "precision": 0.9753086419753086,
+          "roi_area": 0.20494791666666667
+        }
+      ]
+    },
+    "0.875": {
+      "scenes": {
+        "clean": {
+          "recall": 1.0,
+          "precision": 0.994424882629108,
+          "roi_area": 0.16701972598121279,
+          "recall_std": 0.0
+        },
+        "flicker": {
+          "recall": 0.9988151658767772,
+          "precision": 0.6213878077552231,
+          "roi_area": 0.24250758315577647,
+          "recall_std": 0.004999999999999999
+        },
+        "noise": {
+          "recall": 0.9958333333333333,
+          "precision": 0.5511437942778815,
+          "roi_area": 0.16441650390624998,
+          "recall_std": 0.0055555555555555575
+        },
+        "slow_large": {
+          "recall": 0.8610257985257985,
+          "precision": 0.992923379576282,
+          "roi_area": 0.2423212687174479,
+          "recall_std": 0.16241766294117121
+        },
+        "small_fast": {
+          "recall": 0.9403673607584222,
+          "precision": 0.9390698896479244,
+          "roi_area": 0.05580163380456349,
+          "recall_std": 0.1088570815978908
+        },
+        "texture": {
+          "recall": 1.0,
+          "precision": 0.9852844262049546,
+          "roi_area": 0.1476432082999466,
+          "recall_std": 0.0
+        },
+        "ALL": {
+          "recall": 0.9624519322107841,
+          "precision": 0.8316379539358076,
+          "roi_area": 0.17328294542100697,
+          "recall_std": 0.10213662081905005
+        }
+      },
+      "lif1": 0.06821204954758286,
+      "lif2": 0.06688972329720855,
+      "act": 0.9642614349722862,
+      "recall_seed_sd": 0.015221393288628371,
+      "failures": [
+        {
+          "seq": 190,
+          "scene": "small_fast",
+          "recall": 0.5,
+          "precision": 0.9375,
+          "roi_area": 0.010538736979166666
+        },
+        {
+          "seq": 218,
+          "scene": "slow_large",
+          "recall": 0.5333333333333333,
+          "precision": 0.9863013698630136,
+          "roi_area": 0.19838053385416668
+        },
+        {
+          "seq": 236,
+          "scene": "slow_large",
+          "recall": 0.5333333333333333,
+          "precision": 0.9821428571428571,
+          "roi_area": 0.07549641927083334
+        },
+        {
+          "seq": 208,
+          "scene": "slow_large",
+          "recall": 0.6,
+          "precision": 1.0,
+          "roi_area": 0.2598795572916667
+        },
+        {
+          "seq": 230,
+          "scene": "slow_large",
+          "recall": 0.6333333333333333,
+          "precision": 0.9795918367346939,
+          "roi_area": 0.0929931640625
+        },
+        {
+          "seq": 202,
+          "scene": "slow_large",
+          "recall": 0.6333333333333333,
+          "precision": 1.0,
+          "roi_area": 0.11515299479166667
+        },
+        {
+          "seq": 222,
+          "scene": "slow_large",
+          "recall": 0.7,
+          "precision": 0.98,
+          "roi_area": 0.24778645833333332
+        },
+        {
+          "seq": 216,
+          "scene": "slow_large",
+          "recall": 0.75,
+          "precision": 0.9857142857142858,
+          "roi_area": 0.28724772135416665
+        }
+      ]
+    },
+    "0.9375": {
+      "scenes": {
+        "clean": {
+          "recall": 1.0,
+          "precision": 0.919512166400402,
+          "roi_area": 0.17074308849516368,
+          "recall_std": 0.0
+        },
+        "flicker": {
+          "recall": 0.9988151658767772,
+          "precision": 0.5647739905216439,
+          "roi_area": 0.301808564157197,
+          "recall_std": 0.004999999999999999
+        },
+        "noise": {
+          "recall": 0.9944444444444445,
+          "precision": 0.41919247745447064,
+          "roi_area": 0.18294429072627316,
+          "recall_std": 0.006928995160692482
+        },
+        "slow_large": {
+          "recall": 0.8859029484029484,
+          "precision": 0.9945004293886186,
+          "roi_area": 0.26370340983072915,
+          "recall_std": 0.1448214162683999
+        },
+        "small_fast": {
+          "recall": 0.7139834095141357,
+          "precision": 0.8582558775287041,
+          "roi_area": 0.04441634889632936,
+          "recall_std": 0.1536861004228331
+        },
+        "texture": {
+          "recall": 1.0,
+          "precision": 0.9162859089172081,
+          "roi_area": 0.1516101804553953,
+          "recall_std": 0.0
+        },
+        "ALL": {
+          "recall": 0.9372977751899256,
+          "precision": 0.7443338027507704,
+          "roi_area": 0.1900088161892361,
+          "recall_std": 0.13684293009265802
+        }
+      },
+      "lif1": 0.07283498859032989,
+      "lif2": 0.07289157342165709,
+      "act": 0.9642614349722862,
+      "recall_seed_sd": 0.020007356028249046,
+      "failures": [
+        {
+          "seq": 190,
+          "scene": "small_fast",
+          "recall": 0.26666666666666666,
+          "precision": 1.0,
+          "roi_area": 0.008740234375
+        },
+        {
+          "seq": 161,
+          "scene": "small_fast",
+          "recall": 0.5166666666666667,
+          "precision": 0.8857142857142857,
+          "roi_area": 0.0429443359375
+        },
+        {
+          "seq": 166,
+          "scene": "small_fast",
+          "recall": 0.5333333333333333,
+          "precision": 0.8421052631578947,
+          "roi_area": 0.016764322916666668
+        },
+        {
+          "seq": 218,
+          "scene": "slow_large",
+          "recall": 0.55,
+          "precision": 1.0,
+          "roi_area": 0.21913248697916668
+        },
+        {
+          "seq": 236,
+          "scene": "slow_large",
+          "recall": 0.5666666666666667,
+          "precision": 0.9821428571428571,
+          "roi_area": 0.08585611979166667
+        },
+        {
+          "seq": 182,
+          "scene": "small_fast",
+          "recall": 0.6,
+          "precision": 0.8214285714285714,
+          "roi_area": 0.025398763020833333
+        },
+        {
+          "seq": 208,
+          "scene": "slow_large",
+          "recall": 0.6166666666666667,
+          "precision": 1.0,
+          "roi_area": 0.2771728515625
+        },
+        {
+          "seq": 174,
+          "scene": "small_fast",
+          "recall": 0.6379310344827587,
+          "precision": 0.8541666666666666,
+          "roi_area": 0.05154622395833333
+        }
+      ]
+    },
+    "0.96875": {
+      "scenes": {
+        "clean": {
+          "recall": 1.0,
+          "precision": 0.8177854098024981,
+          "roi_area": 0.1724153791155134,
+          "recall_std": 0.0
+        },
+        "flicker": {
+          "recall": 0.9965929873552142,
+          "precision": 0.4576584509376964,
+          "roi_area": 0.3338303814512311,
+          "recall_std": 0.007951220449622525
+        },
+        "noise": {
+          "recall": 0.9958333333333333,
+          "precision": 0.30648488524170825,
+          "roi_area": 0.21513649269386573,
+          "recall_std": 0.0055555555555555575
+        },
+        "slow_large": {
+          "recall": 0.912302927927928,
+          "precision": 0.9924834938903548,
+          "roi_area": 0.28950907389322916,
+          "recall_std": 0.11026297932081014
+        },
+        "small_fast": {
+          "recall": 0.6269595395293719,
+          "precision": 0.8099685970031156,
+          "roi_area": 0.043453931051587305,
+          "recall_std": 0.12589715980336535
+        },
+        "texture": {
+          "recall": 1.0,
+          "precision": 0.8116105309110446,
+          "roi_area": 0.1539676329349181,
+          "recall_std": 0.0
+        },
+        "ALL": {
+          "recall": 0.9296121329608702,
+          "precision": 0.6326165189100814,
+          "roi_area": 0.20471632215711805,
+          "recall_std": 0.14915659504685713
+        }
+      },
+      "lif1": 0.07542461436241865,
+      "lif2": 0.07815676927566528,
+      "act": 0.9642614349722862,
+      "recall_seed_sd": 0.01868398924829545,
+      "failures": [
+        {
+          "seq": 190,
+          "scene": "small_fast",
+          "recall": 0.3333333333333333,
+          "precision": 0.9090909090909091,
+          "roi_area": 0.011417643229166666
+        },
+        {
+          "seq": 166,
+          "scene": "small_fast",
+          "recall": 0.43333333333333335,
+          "precision": 0.7777777777777778,
+          "roi_area": 0.017960611979166666
+        },
+        {
+          "seq": 161,
+          "scene": "small_fast",
+          "recall": 0.48333333333333334,
+          "precision": 0.868421052631579,
+          "roi_area": 0.04261067708333333
+        },
+        {
+          "seq": 182,
+          "scene": "small_fast",
+          "recall": 0.5,
+          "precision": 0.6956521739130435,
+          "roi_area": 0.023079427083333333
+        },
+        {
+          "seq": 164,
+          "scene": "small_fast",
+          "recall": 0.5666666666666667,
+          "precision": 0.6785714285714286,
+          "roi_area": 0.03046875
+        },
+        {
+          "seq": 218,
+          "scene": "slow_large",
+          "recall": 0.5666666666666667,
+          "precision": 1.0,
+          "roi_area": 0.2339111328125
+        },
+        {
+          "seq": 174,
+          "scene": "small_fast",
+          "recall": 0.5862068965517241,
+          "precision": 0.8260869565217391,
+          "roi_area": 0.05160319010416667
+        },
+        {
+          "seq": 170,
+          "scene": "small_fast",
+          "recall": 0.6,
+          "precision": 0.75,
+          "roi_area": 0.03164876302083333
+        }
+      ]
+    }
+  }
+}
