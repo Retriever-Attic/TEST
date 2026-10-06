@@ -62,7 +62,17 @@ def verdict(res):
     both = res["raw+diff"]["scenes"]["ALL"]
     gap = raw["recall"] - diff["recall"]
     lines = [f"- raw recall {raw['recall']:.2f} vs diff {diff['recall']:.2f} (gap {gap:+.2f}), raw+diff {both['recall']:.2f}"]
-    if raw["recall"] < 0.8:
+    dead = [m for m, r in res.items() if r["lif2"] < 0.01]
+    if dead:
+        lines.append(f"- **경고: 출력층 발화율 < 0.01 ({', '.join(dead)})**. 정보 부족이 아니라 학습 실패일 수 있음 → 해당 행은 판정에서 제외하고 gain/lr/epochs부터 조정.")
+    if gap < -0.05:
+        # One frame per step + 2 LIF layers: the net must build the temporal difference
+        # from membranes alone, so raw is NOT an upper bound here.
+        lines.append("- 판정: **raw가 상한선 역할을 못 함**. 얕은 SNN은 막전위만으로 프레임 간 차이를 만들기 어려워 원본에선 모양으로 맞춤. "
+                     "'raw도 못 뽑음 → 모델 문제'로 읽으면 안 됨. raw+diff와 diff를 비교하고, diff가 약한 장면(실패 목록)부터 볼 것.")
+        if both["recall"] > diff["recall"] + 0.05:
+            lines.append("- raw+diff > diff → 차분이 버리는 정보(밝기, 내부 영역)가 도움이 됨. 인코딩 보강 쪽.")
+    elif raw["recall"] < 0.8:
         lines.append("- 판정: **모델 쪽 문제 가능성 큼**. 원본을 줘도 못 뽑음 → 구조/손실/라벨/beta 점검.")
     elif gap > 0.05:
         lines.append("- 판정: **입력(차분 인코딩) 문제 가능성 큼**. 원본에선 뽑힘 → 4.2 인코딩 결과 참고.")

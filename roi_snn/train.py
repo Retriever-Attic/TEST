@@ -28,12 +28,41 @@ def split(ds, val_frac=0.25, seed=0):
     return idx[n_val:], idx[:n_val]
 
 
+def fit_norm(frames, idx, mode, thr):
+    """Per-channel (mean, std) from training sequences.
+
+    Without this a single fixed gain overdrives some encodings and starves
+    others, and the output LIF layer dies (rate ~0), which looks like "the
+    input carries no information" when it is really a training failure.
+    Event-like channels are only scaled (zeros stay zeros, so sparsity and
+    AER conversion survive); the raw-intensity channel is also centered.
+    Both fold into conv1 weights/bias in hardware.
+    """
+    x = encode(frames[idx[:64]], mode, thr)  # (T, B, C, H, W)
+    std = x.std(dim=(0, 1, 3, 4)).clamp_min(1e-6)
+    mean = x.mean(dim=(0, 1, 3, 4))
+    if mode == "raw":
+        center = torch.ones_like(mean, dtype=torch.bool)
+    elif mode == "raw+diff":
+        center = torch.tensor([True, False])
+    else:
+        center = torch.zeros_like(mean, dtype=torch.bool)
+    mean = torch.where(center, mean, torch.zeros_like(mean))
+    return mean.view(1, 1, -1, 1, 1), std.view(1, 1, -1, 1, 1)
+
+
 def run(args):
     torch.manual_seed(args.seed)
     ds = load_npz(args.data) if args.data else make_synthetic(args.n_per_scene, T=args.T, seed=args.seed)
     tr_idx, va_idx = split(ds, seed=args.seed)
     frames = torch.from_numpy(ds.frames)
     masks = torch.from_numpy(ds.masks).float()
+
+    if args.norm:
+        mean, std = fit_norm(frames, tr_idx, args.mode, args.thr)
+    else:
+        mean, std = 0.0, 1.0
+    prep = lambda b: (encode(frames[b], args.mode, args.thr) - mean) / std * args.gain  # noqa: E731
 
     model = RoiSNN(in_channels(args.mode), args.hidden, args.beta, learn_beta=args.learn_beta)
     opt = torch.optim.Adam(model.parameters(), lr=args.lr)
@@ -47,7 +76,7 @@ def run(args):
         losses = []
         for i in range(0, len(perm), args.batch):
             b = perm[i:i + args.batch]
-            x = encode(frames[b], args.mode, args.thr) * args.gain
+            x = prep(b)
             y = masks[b].transpose(0, 1).unsqueeze(2)  # (T, B, 1, H, W)
             out = model(x)
             loss = F.binary_cross_entropy_with_logits(
@@ -65,9 +94,9 @@ def run(args):
     with torch.no_grad():
         for i in range(0, len(va_idx), args.batch):
             b = va_idx[i:i + args.batch]
-            x = encode(frames[b], args.mode, args.thr) * args.gain
+            x = prep(b)
             out = model(x)
-            act.append(input_activity(x))
+            act.append(input_activity(encode(frames[b], args.mode, args.thr)))
             rate1.append(out["spk1"].mean().item())
             rate2.append(out["spk2"].mean().item())
             acc.add(out["spk2"][:, :, 0].numpy(), masks[b].transpose(0, 1).numpy(), ds.scenes[b], b)
@@ -91,8 +120,10 @@ def build_parser():
     p.add_argument("--beta", type=float, default=0.875)
     p.add_argument("--learn-beta", action="store_true")
     p.add_argument("--thr", type=float, default=0.05, help="diff threshold for thresh/polarity")
-    p.add_argument("--gain", type=float, default=4.0,
-                   help="input scale; folds into conv1 weights / threshold in HW")
+    p.add_argument("--gain", type=float, default=1.0,
+                   help="input scale after normalization; folds into conv1 weights in HW")
+    p.add_argument("--no-norm", dest="norm", action="store_false",
+                   help="disable per-channel input normalization (see fit_norm)")
     p.add_argument("--data", help="npz with frames/masks[/scenes]; synthetic if omitted")
     p.add_argument("--n-per-scene", type=int, default=40)
     p.add_argument("--T", type=int, default=32)
